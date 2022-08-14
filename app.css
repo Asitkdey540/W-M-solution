@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+section {
+    margin-bottom: 5%;
+}
+
+#top-side{
+    background-image: url(images/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#middle-side{
+    background-image: url(images/cheap-solution.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#services{
+    background-image: url(images/service-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* services-effect on 'service' key-word. Start */
+
+.services-effect {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.services-effect::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0000ca6c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.services-effect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* services-effect on 'service' key-word. End */
